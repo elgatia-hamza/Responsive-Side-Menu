@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Side Menu</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <span id="open-side">
+            <a href="#" onclick="openSideMenu();">
+                <svg width="30" height="30">
+                    <path d="M0, 5 30, 5" stroke="#fff" stroke-width="5"></path>
+                    <path d="M0, 14 30, 14" stroke="#fff" stroke-width="5"></path>
+                    <path d="M0, 23 30, 23" stroke="#fff" stroke-width="5"></path>
+                </svg>
+            </a>
+        </span>
+        <div class="logo-box">
+            <span class="logo">LOGO</span>
+            <span class="tag">here</span>
+        </div>
+        <ul class="navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSideMenu();">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Service</a>
+        <a href="#">Contact</a>
+    </div>
+    <div id="main">
+        <h1>Responsive <span class="cross-line">Side Menu</span></h1>
+    </div>
+</body>
+    <script>
+        function openSideMenu(){
+            const sideMenu = document.getElementById("side-menu");
+            const main = document.getElementById("main");
+
+            sideMenu.style.width = '250px';
+            main.style.marginLeft = '250px';
+        }
+
+        function closeSideMenu(){
+            const sideMenu = document.getElementById("side-menu");
+            const main = document.getElementById("main");
+
+            sideMenu.style.width = '0';
+            main.style.marginLeft = '0';
+        }
+    </script>
+</html>
